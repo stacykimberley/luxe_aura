@@ -8,7 +8,7 @@ body {
     color: #333;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,29 +16,55 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.75rem;
 }
 
-.navbar {
+.sleek-navbar {
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .navbar-brand {
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 2.7rem;
+    font-weight: 700;
     font-family: 'Playfair Display', serif;
-    color: #000000 !important;
+    color: #000 !important;
+    margin-right: 2rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-left: 1rem;
 }
 
 .nav-link {
+    font-size: 1.2rem;
     font-weight: 500;
-    font-size: x-large;
-    color: #555 !important;
-    margin-right: 20px;
-    margin-right: 40px;
+    color: #333 !important;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #007bff !important;
+    color: #a08c0c !important;
 }
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,...");
+}
+
+.btn.btn-primary.btn-lg {
+    background-color: #000000;
+    color: #ffff;
+}
+
 
 .container {
     padding-top: 4rem;
@@ -52,6 +78,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .jumbotron {
     margin-top: 80px;
+}
+
+.messages-container {
+    position: relative;
+    z-index: 1050;
+    margin-top: 1rem;
 }
 
 /* Sticky Footer */
