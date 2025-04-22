@@ -86,6 +86,70 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 }
 
+/* Styling for the sorting dropdown */
+.sorting-dropdown {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.sorting-dropdown select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    border: 1px solid #d4af37;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.sorting-dropdown select:hover {
+    border-color: #007bff;
+}
+
+.sorting-dropdown select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.sorting-dropdown label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Styling for the delivery banner */
+#delivery-banner {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 0;
+    padding-top: 100px;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+}
+
+#delivery-banner .logo-font {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+#delivery-banner {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
 /* Sticky Footer */
 footer {
     background-color: #f8f9fa;
