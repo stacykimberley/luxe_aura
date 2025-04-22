@@ -1,7 +1,27 @@
 {% extends "base.html" %}
-
 {% load static %}
 
 {% block content %}
-    <h1 class="display-4 text-success">123 testing</h1>
+<div class="jumbotron bg-white shadow-sm mt-5" data-aos="fade-up">
+    <h1 class="display-4 text-primary">Welcome to Luxe Aura</h1>
+    <p class="lead">Experience premium elegance with our curated collections.</p>
+    <hr class="my-4">
+    <p>Discover handpicked designs crafted to elevate your lifestyle.</p>
+    <div class="row text-center mb-4" data-aos="fade-up">
+        {% for product in featured_products %}
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{{ product.image.url }}" class="card-img-top product-img" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">{{ product.volume }} mL</p>
+                            <p class="card-text">Rating: {{ product.rating }}</p>
+                            <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="btn btn-primary btn-lg" href="{% url 'all_products' %}" role="button">Browse Collection</a>
+</div>
 {% endblock %}
