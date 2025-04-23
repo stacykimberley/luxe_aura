@@ -1,0 +1,255 @@
+body {
+    background-color: #fdfdfd;
+    background-image: url('/static/images/wallpaper.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding-top: 90px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.75rem;
+}
+
+.sleek-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-size: 2.7rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #000 !important;
+    margin-right: 2rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333 !important;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #a08c0c !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,...");
+}
+
+.btn.btn-primary.btn-lg {
+    background-color: #000000;
+    color: #ffff;
+}
+
+
+.container {
+    padding-top: 4rem;
+}
+
+.product-img {
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.jumbotron {
+    margin-top: 80px;
+}
+
+.messages-container {
+    position: relative;
+    z-index: 1050;
+    margin-top: 1rem;
+}
+
+/* Styling for the sorting dropdown */
+.sorting-dropdown {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.sorting-dropdown select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    border: 1px solid #d4af37;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.sorting-dropdown select:hover {
+    border-color: #007bff;
+}
+
+.sorting-dropdown select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.sorting-dropdown label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Styling for the delivery banner */
+#delivery-banner {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 0;
+    padding-top: 100px;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+}
+
+#delivery-banner .logo-font {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+#delivery-banner {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* General Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Headings */
+  .card-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #004080;
+  }
+  
+  /* Form Elements */
+  form label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  form .form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  form .form-control:focus {
+    border-color: #004080;
+    box-shadow: 0 0 0 0.2rem rgba(0, 64, 128, 0.1);
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #004080;
+    border-color: #004080;
+    font-weight: 500;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #002f5f;
+    border-color: #002f5f;
+  }
+  
+  .btn-secondary {
+    background-color: #f8f9fa;
+    color: #004080;
+    border: 1px solid #004080;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Text */
+  .text-muted {
+    color: #6c757d !important;
+  }
+  
+  .text-primary {
+    color: #004080 !important;
+  }
+  
+  /* Spacing */
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem !important;
+  }
+  
+  .text-center a {
+    text-decoration: underline;
+    color: #004080;
+  }
+  
+  .text-center a:hover {
+    color: #002f5f;
+  }
+
+
+/* Sticky Footer */
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
