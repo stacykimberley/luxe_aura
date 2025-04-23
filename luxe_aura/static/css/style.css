@@ -1,6 +1,6 @@
 body {
     background-color: #fdfdfd;
-    background-image: url('/static/images/wallpaper.jpg');
+    background-image: url('/static/images/wallpaper.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -148,6 +148,96 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
     }
 }
+
+/* General Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Headings */
+  .card-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #004080;
+  }
+  
+  /* Form Elements */
+  form label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  form .form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  form .form-control:focus {
+    border-color: #004080;
+    box-shadow: 0 0 0 0.2rem rgba(0, 64, 128, 0.1);
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #004080;
+    border-color: #004080;
+    font-weight: 500;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #002f5f;
+    border-color: #002f5f;
+  }
+  
+  .btn-secondary {
+    background-color: #f8f9fa;
+    color: #004080;
+    border: 1px solid #004080;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Text */
+  .text-muted {
+    color: #6c757d !important;
+  }
+  
+  .text-primary {
+    color: #004080 !important;
+  }
+  
+  /* Spacing */
+  .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem !important;
+  }
+  
+  .text-center a {
+    text-decoration: underline;
+    color: #004080;
+  }
+  
+  .text-center a:hover {
+    color: #002f5f;
+  }
 
 
 /* Sticky Footer */

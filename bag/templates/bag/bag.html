@@ -1,0 +1,81 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-4">
+  <h2>Your Bag</h2>
+
+  {% if bag_items %}
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in bag_items %}
+          <tr>
+            <td>
+              <img
+                src="{{ item.product.image.url }}"
+                alt="{{ item.product.name }}"
+                class="cart-img"
+              />
+              <span>{{ item.product.name }}</span>
+            </td>
+            <td>
+              <form
+                method="POST"
+                action="{% url 'bag:update_bag_item' item.product.id %}"
+              >
+                {% csrf_token %}
+                <input
+                  type="number"
+                  name="quantity"
+                  value="{{ item.quantity }}"
+                  min="1"
+                  class="form-control w-50"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-sm btn-outline-primary mt-2"
+                >
+                  Update
+                </button>
+              </form>
+            </td>
+            <td>${{ item.product.price }}</td>
+            <td>${{ item.total_price|floatformat:2 }}</td>
+            <!-- Use total_price calculated in the view -->
+            <td>
+              <form
+                method="POST"
+                action="{% url 'bag:remove_from_bag' item.product.id %}"
+              >
+                {% csrf_token %}
+                <button type="submit" class="btn btn-sm btn-outline-danger">
+                  Remove
+                </button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between">
+        <h4>Total: ${{ bag_total|floatformat:2 }}</h4>
+        <a href="{% url 'checkout' %}" class="btn btn-primary"
+          >Proceed to Checkout</a
+        >
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <p>Your bag is empty.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -30,9 +30,9 @@
                     <p class="card-text">{{ product.volume }} mL</p>
                     <p class="card-text">Rating: {{ product.rating }}</p>
                     <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
-                    <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                    <form method="POST" action="{% url 'bag:add_to_bag' product.id %}">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-sm btn-outline-primary mt-2">Add to Cart</button>
+                        <button type="submit" class="btn btn-sm btn-outline-primary mt-2">Add to Bag</button>
                     </form>
                 </div>
             </div>
