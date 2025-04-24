@@ -15,6 +15,7 @@ ALLOWED_HOSTS = [
     'your-heroku-app-name.herokuapp.com',
     'localhost',
     '127.0.0.1',
+    'https://luxe-aura-3e686046c2ee.herokuapp.com/',
 ]
 
 # Application definition
